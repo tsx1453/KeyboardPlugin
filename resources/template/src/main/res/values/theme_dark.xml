@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+**
+** Copyright 2015, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 键盘图标 -->
+    <style name="KeyboardIconsExternal">
+        <!--shift-->
+        <item name="iconShiftKey">@drawable/ic_keyboard_capital_normal</item>
+        <item name="iconShiftKeyShifted">@drawable/ic_keyboard_capital_first</item>
+
+        <item name="iconDeleteKey">@drawable/ic_keyboard_delete</item>
+        <!--设置：逗号弹出（也可能在其他键弹出）-->
+        <item name="iconSettingsKey">@drawable/dark_with_frame_key_setting_set</item>
+
+        <!--七种都在回车上出现-->
+        <item name="iconEnterKey">@drawable/ic_keyboard_action_enter</item>
+        <item name="iconSearchKey">@drawable/ic_keyboard_action_search</item>
+        <item name="iconDoneKey">@drawable/ic_keyboard_action_done</item>
+
+        <item name="iconSendKey">@drawable/ic_keyboard_action_send</item>
+        <item name="iconGoKey">@drawable/ic_keyboard_action_go</item>
+        <item name="iconNextKey">@drawable/ic_keyboard_action_next</item>
+        <item name="iconPreviousKey">@drawable/ic_keyboard_action_previous</item>
+
+        <!--链接电脑将手机当键盘时，会出现tab键-->
+        <item name="iconTabKey">@drawable/ic_dark_with_frame_theme_tab</item>
+        <!--数字键盘右下角的space-->
+        <item name="iconSpaceKeyForNumberLayout">@drawable/ic_dark_with_frame_theme_space</item>
+        <!--普通键盘的space-->
+        <item name="iconSpaceKey">@null</item>
+
+        <!--单词分词：印第语->空格和句号之间多出来的键-->
+        <item name="iconZwnjKey">@drawable/ic_dark_with_frame_theme_zwnj</item>
+        <item name="iconZwjKey">@drawable/ic_dark_with_frame_theme_zwj</item>
+
+        <!--Enter长按弹出的Emoji-->
+        <item name="iconEmojiActionKey">@drawable/dark_with_frame_key_emoji_set</item>
+        <!--键盘上的Emoji-->
+        <item name="iconEmojiNormalKey">@drawable/dark_with_frame_key_emoji_set</item>
+
+        <!--候选栏图标:  皮肤图标，隐藏按钮图标，表情图标，设置图标-->
+        <item name="iconThemeKey">@drawable/dark_with_frame_key_store_set</item>
+        <item name="iconHideKey">@drawable/dark_with_frame_key_hide_set</item>
+        <item name="iconEmojiKey">@drawable/dark_with_frame_key_emoji_set</item>
+        <item name="iconOptionKey">@drawable/dark_with_frame_key_setting_set</item>
+    </style>
+    <style name="KeyboardThemeExternal" parent="KeyboardIconsExternal">
+        <item name="inputViewStyle">@style/InputViewExternal</item>
+        <item name="keyboardStyle">@style/KeyboardExternal</item>
+        <item name="keyboardViewStyle">@style/KeyboardViewExternal</item>
+        <item name="mainKeyboardViewStyle">@style/MainKeyboardViewExternal</item>
+        <item name="moreKeysKeyboardStyle">@style/MoreKeysKeyboardExternal</item>
+        <!-- Note: KLP theme uses the same style for both general more keys and action more keys. -->
+        <item name="moreKeysKeyboardViewStyle">@style/MoreKeysKeyboardViewExternal</item>
+        <item name="moreKeysKeyboardViewForActionStyle">@style/MoreKeysKeyboardViewExternal</item>
+        <item name="suggestionStripViewStyle">@style/SuggestionStripViewExternal</item>
+        <item name="suggestionWordStyle">@style/SuggestionWordExternal</item>
+    </style>
+
+
+
+
+    <style name="InputViewExternal">
+        <!-- 输入视图整体背景，包含键盘和候选栏 -->
+        <item name="android:background">@drawable/ic_keyboard_overall</item>
+    </style>
+
+
+
+    <style name="KeyboardExternal">
+        <!-- ICS ： 不要改-->
+        <item name="themeId">ICS</item>
+
+        <!-- 键盘的边距、行间距、列间距设置 ： -->
+        <item name="horizontalGap">1.8%p</item>
+    </style>
+    <style name="MoreKeysKeyboardExternal" parent="KeyboardExternal">
+        <!-- 弹出键盘的边距、行间距、列间距设置 ： -->
+        <item name="keyboardTopPadding">0%p</item>
+        <item name="keyboardBottomPadding">0%p</item>
+        <item name="horizontalGap">0%p</item>
+        <!--暂时不改-->
+        <item name="touchPositionCorrectionData">@null</item>
+    </style>
+
+
+
+
+
+    <style name="KeyboardViewExternal">
+        <!-- 键盘背景，此处设置的背景默认应用到主键盘（MainKeyboardView）、弹出键盘(MoreKeysKeyboardView) -->
+        <item name="android:background">@color/transparent</item>
+
+        <!-- 按键背景（普通按键、Shift(Toggle)键、Enter(Action)键） -->
+        <item name="keyBackground">@drawable/dark_with_frame_key_bg_set</item>
+        <!-- 功能键背景，未设置默认使用keyBackground -->
+        <item name="functionalKeyBackground">@drawable/dark_with_frame_functional_key_bg_set</item>
+        <!-- 空格键背景，未设置默认使用functionalKeyBackground -->
+        <item name="spacebarBackground">@drawable/dark_with_frame_spacebar_key_bg_set</item>
+        <!-- 符号键盘内的对应的键也会被改变  ⬇️-->
+        <!-- 字符-字母键盘切换键背景，未设置默认使用functionalKeyBackground -->
+        <!--<item name="toSymbolBackground">@drawable/btn_keyboard_key_functional_klp</item>-->
+
+         <!--语言切换键背景，未设置默认使用functionalKeyBackground-->
+        <item name="emojiBackground">@drawable/btn_keyboard_key_functional_klp</item>
+
+         <!--逗号键背景，未设置默认使用functionalKeyBackground -->
+        <item name="commaBackground">@drawable/btn_keyboard_key_functional_klp</item>
+         <!--句号键背景，未设置默认使用functionalKeyBackground -->
+        <item name="periodBackground">@drawable/btn_keyboard_key_functional_klp</item>
+
+
+        <!-- 删除键背景，未设置默认使用functionalKeyBackground -->
+        <!--<item name="deleteBackground">@drawable/btn_keyboard_key_functional_klp</item>-->
+        <!-- zwnj键背景，位于句号和空格键中间，未设置默认使用functionalKeyBackground -->
+        <!--<item name="zwnjBackground">@drawable/btn_keyboard_key_functional_klp</item>-->
+        <!-- 字符-字符Shift键背景，未设置默认使用functionalKeyBackground ： 打开符号键盘时的shift-->
+        <!--<item name="symbolShiftBackground">@drawable/btn_keyboard_key_functional_klp</item>-->
+
+        <!-- 预览文字颜色 -->
+        <item name="keyPreviewTextColor">#ffffff</item>
+        <!-- 键文字颜色 -->
+        <item name="keyTextColor">#ffffff</item>
+        <!-- 键未激活文字颜色，当ShiftLetter开关激活时使用 -->
+        <item name="keyTextInactivatedColor">#000000</item>
+        <!-- 功能键文字颜色 -->
+        <item name="functionalTextColor">#ffffff</item>
+        <!-- 提示文字颜色 角标字符 -->
+        <!-- 小于2个用letter -->
+        <item name="keyHintLetterColor">#ffffff</item>
+        <!-- 多于2个字符用label -->
+        <item name="keyHintLabelColor">#ffffff</item>
+        <item name="keyShiftedLetterHintInactivatedColor">#9f9f9f</item>
+        <item name="keyShiftedLetterHintActivatedColor">#9f9f9f</item>
+    </style>
+
+    <!--主键盘-->
+    <style name="MainKeyboardViewExternal" parent="KeyboardViewExternal">
+        <!--提示文字距离右侧距离-->
+        <item name="keyHintLetterPadding">4dp</item>
+        <!-- 预览的动画，高度，背景， 背景为必须，其他不设置可以使用默认 -->
+        <item name="keyPreviewBackground">@drawable/ic_keyboard_popup_background</item>
+        <!--<item name="keyPreviewHeight">@dimen/config_key_preview_height_holo</item>-->
+        <!--上下偏移量-->
+        <!--<item name="keyPreviewOffset">@dimen/config_key_preview_offset_holo</item>-->
+        <!--弹出消失 的动画-->
+        <!--<item name="keyPreviewShowUpAnimator">@anim/key_preview_show_up_holo</item>-->
+        <!--<item name="keyPreviewDismissAnimator">@anim/key_preview_dismiss_holo</item>-->
+
+        <!-- 滑动输入的参数，输入的提示颜色、文字颜色、轨迹颜色等 -->
+        <!--<item name="gestureFloatingPreviewTextColor">@color/highlight_color_klp</item>-->
+        <!-- 背景颜色-->
+        <!--<item name="gestureFloatingPreviewColor">@color/gesture_floating_preview_color_holo</item>-->
+        <!--线的颜色-->
+        <item name="gestureTrailColor">#ffffff</item>
+        <!--先不改-->
+        <!--<item name="slidingKeyInputPreviewColor">@color/highlight_translucent_color_klp</item>-->
+        <!--背景文字的投影设置 -》 暂时先不改-->
+        <!--<item name="languageOnSpacebarTextShadowRadius">1.0</item>-->
+        <!--<item name="languageOnSpacebarTextShadowColor">@color/spacebar_text_shadow_color_holo</item>-->
+        <!-- 空格键文字颜色 -->
+        <item name="languageOnSpacebarTextColor">#ffffff</item>
+    </style>
+
+
+
+
+    <style name="MoreKeysKeyboardViewExternal" parent="KeyboardViewExternal">
+        <!-- 弹出键盘的背景、键背景、分割线、字体（系统） -->
+        <!--二级菜单背景-->
+        <item name="android:background">@drawable/ic_keyboard_popup_bg</item>
+        <!--二级菜单每一项的背景-->
+        <item name="keyBackground">@drawable/dark_with_frame_popup_key_bg</item>
+        <item name="keyTextColor">#ffffff</item>
+        <!-- 先 ： 与   候选栏单词分割线  保持一致-->
+        <item name="divider">@drawable/dark_with_frame_candidate_divider</item>
+        <item name="keyTypeface">normal</item>
+
+    </style>
+
+
+    <!--建议栏-->
+    <style name="SuggestionStripViewExternal" parent="KeyboardViewExternal">
+
+        <!-- 自动纠错候选词颜色 -->
+        <item name="colorAutoCorrect">#a3a3a3</item>
+        <!-- 建议候选词颜色 -->
+        <item name="colorSuggested">#a3a3a3</item>
+        <!-- 有效输入单词颜色 -->
+        <item name="colorValidTypedWord">#439cff</item>
+        <!-- 输入单词颜色 -->
+        <item name="colorTypedWord">#439cff</item>
+        <!-- 候选栏背景 -->
+        <item name="suggestionStripBackground">@drawable/transparent</item>
+        <!-- 候选栏单词分割线 -->
+        <item name="android:src">@drawable/dark_with_frame_candidate_divider</item>
+
+    </style>
+
+    <style name="SuggestionWordExternal" />
+</resources>
