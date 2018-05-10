@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Galaxy Theme</string>
-    <string name="theme_id">3aa1fc1e-9f34-4324-afd3-32d0e2277373</string>
-    <!--按键音效-->
+    <string name="app_name">AppModuleName</string>
+    <string name="theme_id">ThemeIdModule</string>
+    <!-- 按键音效 -->
     <string name="keyboard_theme_sound_name"></string>
 </resources>

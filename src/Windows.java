@@ -81,11 +81,11 @@ public class Windows {
                 String appName = appNameInput.getText();
                 String modName = moduleNameInput.getText();
                 String draPath = drawablePath.getText();
-                if (pkgName.length()==0||appName.length()==0||modName.length()==0){
-                    Messages.showMessageDialog("check your input!","warning",Messages.getErrorIcon());
+                if (pkgName.length() == 0 || appName.length() == 0 || modName.length() == 0) {
+                    Messages.showMessageDialog("check your input!", "warning", Messages.getErrorIcon());
                     return;
                 }
-                new FileOperate(mProject,mModule,modName,draPath,appName,pkgName);
+                new FileOperate(mProject, mModule, modName, draPath, appName, pkgName);
                 hide();
             }
         });
@@ -119,11 +119,17 @@ public class Windows {
             } else {
                 resultFile = mJFileChooser.getCurrentDirectory();
             }
-            if (new File(resultFile.getAbsolutePath()).listFiles().length<1){
-                Messages.showMessageDialog("path is unuseless!","Error!",Messages.getErrorIcon());
+            String result = resultFile.getAbsolutePath();
+            if (new File(result).listFiles().length < 1) {
+                Messages.showMessageDialog("path is unuseless!", "Error!", Messages.getErrorIcon());
                 return;
             }
-            drawablePath.setText(resultFile.getAbsolutePath());
+            if (!result.endsWith("develop")) {
+                if (new File(result + File.separator + "develop").exists()) {
+                    result = result + File.separator + "develop";
+                }
+            }
+            drawablePath.setText(result);
         }
     }
 }
