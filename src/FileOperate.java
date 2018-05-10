@@ -6,9 +6,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.*;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Pattern;
 
 import static com.intellij.openapi.util.io.StreamUtil.closeStream;
@@ -26,6 +24,7 @@ public class FileOperate {
     private String drawablePath;
     private String appName;
     private String pkgName;
+    private List<String> messages;
 
     public FileOperate(Project project, Module module, String mModuleName, String drawablePath, String appName, String pkgName) {
         this.project = project;
@@ -34,6 +33,7 @@ public class FileOperate {
         this.drawablePath = drawablePath;
         this.appName = appName;
         this.pkgName = pkgName;
+        messages = new ArrayList<>();
         mProjectPath = project.getBasePath();
         moduleRootPath = mProjectPath + File.separator + mModuleName + File.separator + "src" + File.separator +
                 "main" + File.separator + "res";
@@ -48,6 +48,8 @@ public class FileOperate {
             }).run();
             copyDrawableFile();
             deleteTest();
+            icons();
+            prview();
             changeBuildGradle();
             changeManifest();
         } catch (Exception e) {
@@ -173,25 +175,111 @@ public class FileOperate {
         }
     }
 
-    private void setId(){
-        Map<String,String> map = new HashMap<>();
-        map.put("__VIEWSTATE","/wEPDwUJMjE1NTQ0MjIxZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBgUMY2hrVXBwZXJjYXNlBQtjaGtCcmFja2V0cwUJY2hrSHlwZW5zBQljaGtCYXNlNjQFCmNoa1JGQzc1MTUFBmNoa1VSTBFFiCwfZ+dToorVhn7l31l2W3H3");
-        map.put("__VIEWSTATEGENERATOR","247C709F");
-        map.put("__EVENTVALIDATION","/wEWCgLg2er8CwLJkuW4AwKyzJeLDALcw7KJAgKm/OiABwLfgo3zCALh/K6KCALk14fZCQLu3NjFAQL6g7v1AwauOOi5YkWtK2DAl7QRp7CcUmMJ");
-        map.put("txtCount","1");
-        map.put("chkHypens","on");
-        map.put("LocalTimestampValue","Date().getTime()");
-        map.put("btnGenerate","Generate some GUIDs!");
-        try{
+    private void setId() {
+        Map<String, String> map = new HashMap<>();
+        map.put("__VIEWSTATE", "/wEPDwUJMjE1NTQ0MjIxZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBgUMY2hrVXBwZXJjYXNlBQtjaGtCcmFja2V0cwUJY2hrSHlwZW5zBQljaGtCYXNlNjQFCmNoa1JGQzc1MTUFBmNoa1VSTBFFiCwfZ+dToorVhn7l31l2W3H3");
+        map.put("__VIEWSTATEGENERATOR", "247C709F");
+        map.put("__EVENTVALIDATION", "/wEWCgLg2er8CwLJkuW4AwKyzJeLDALcw7KJAgKm/OiABwLfgo3zCALh/K6KCALk14fZCQLu3NjFAQL6g7v1AwauOOi5YkWtK2DAl7QRp7CcUmMJ");
+        map.put("txtCount", "1");
+        map.put("chkHypens", "on");
+        map.put("LocalTimestampValue", "Date().getTime()");
+        map.put("btnGenerate", "Generate some GUIDs!");
+        try {
             Document doc = Jsoup.connect("https://www.guidgenerator.com/online-guid-generator.aspx")
                     .data(map)
                     .post();
             String path = mProjectPath + File.separator + mModuleName + File.separator + "src" + File.separator +
                     "main" + File.separator + "res" + File.separator + "values" + File.separator + "strings.xml";
-            changeContext(path,FileOperate.ThemeModuleId,doc.getElementById("txtResults").text());
-        }catch (Exception e){
+            changeContext(path, FileOperate.ThemeModuleId, doc.getElementById("txtResults").text());
+        } catch (Exception e) {
             e.printStackTrace();
-            Messages.showMessageDialog("get guid error!","error",Messages.getErrorIcon());
+            Messages.showMessageDialog("get guid error!", "error", Messages.getErrorIcon());
+        }
+    }
+
+    private void icons() {
+        iconsHelper(moduleRootPath + File.separator + "drawable-xxhdpi");
+        String root = "";
+        if (drawablePath.contains("output")) {
+            root = drawablePath.replace("output", "operation") + File.separator;
+        } else if (drawablePath.contains("develop")) {
+            root = drawablePath.replace("develop", "operation") + File.separator;
+        }
+        iconsHelper(root);
+    }
+
+    private void iconsHelper(String xxPath) {
+//        String xxPath = moduleRootPath + File.separator + "drawable-xxhdpi";
+//        debug(xxPath);
+        try {
+            String[] icons = {"icon.png", "icon_72.png", "icon_192.png"};
+            for (int i = 0; i < 3; i++) {
+                File file = new File(xxPath + File.separator + icons[i]);
+                if (!file.exists()) {
+                    continue;
+                }
+                switch (i) {
+                    case 0:
+//                        file.delete();
+                        break;
+                    case 1:
+                        File targetFile = new File(moduleRootPath + File.separator + "drawable-xxhdpi" + File.separator + "theme_icon.png");
+                        if (targetFile.exists()) {
+//                        file.delete();
+                            break;
+                        }
+                        FileUtils.copyFile(file, targetFile);
+                        break;
+                    case 2:
+                        File targetFile1 = new File(moduleRootPath + File.separator + "drawable-xxxhdpi" + File.separator + "theme_icon.png");
+                        if (targetFile1.exists()) {
+//                        file.delete();
+                            break;
+                        }
+                        FileUtils.copyFile(file, targetFile1);
+                        break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void prview() {
+        try {
+            String root = "";
+            if (drawablePath.contains("output")) {
+                root = drawablePath.replace("output", "operation") + File.separator;
+            } else if (drawablePath.contains("develop")) {
+                root = drawablePath.replace("develop", "operation") + File.separator;
+            }
+//            debug(root);
+            boolean flag = true;
+            File prview1 = new File(root + "preview_665x1182.jpg");
+            if (!prview1.exists()) {
+                prview1 = new File(root + "preview_665x1182.png");
+                if (!prview1.exists()) {
+                    messages.add("preview_665x1182");
+                    flag = false;
+                }
+            }
+            if (flag) {
+                FileUtils.copyFile(prview1, new File(moduleRootPath + File.separator + "drawable-xxhdpi" + File.separator + "theme_preview_img.jpg"));
+            }
+            flag = true;
+            File preview2 = new File(root + "store_Promotion_400x600.jpg");
+            if (!preview2.exists()) {
+                preview2 = new File(root + "store_Promotion_400x600.png");
+                if (!preview2.exists()) {
+                    messages.add("store_Promotion_400x600");
+                    flag = false;
+                }
+            }
+            if (flag) {
+                FileUtils.copyFile(preview2, new File(moduleRootPath + File.separator + "drawable-xxhdpi" + File.separator + "keyboard_theme_preview.jpg"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

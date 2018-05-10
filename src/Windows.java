@@ -86,7 +86,9 @@ public class Windows {
                     return;
                 }
                 new FileOperate(mProject, mModule, modName, draPath, appName, pkgName);
+                okBtn.setEnabled(false);
                 hide();
+                okBtn.setEnabled(true);
             }
         });
         jPanel.add(okBtn);
@@ -123,11 +125,6 @@ public class Windows {
             if (new File(result).listFiles().length < 1) {
                 Messages.showMessageDialog("path is unuseless!", "Error!", Messages.getErrorIcon());
                 return;
-            }
-            if (!result.endsWith("develop")) {
-                if (new File(result + File.separator + "develop").exists()) {
-                    result = result + File.separator + "develop";
-                }
             }
             drawablePath.setText(result);
         }

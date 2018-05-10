@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="381fc0da-c298-48e8-b349-bb71b0f14dc1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_11_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KeyboardPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KeyboardPlugin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/template/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/template/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileOperate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileOperate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Windows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Windows.java" afterDir="false" />
     </list>
@@ -22,17 +19,8 @@
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="992">
+            <state relative-caret-position="608">
               <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeyBoardAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/KeyBoardAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -40,8 +28,8 @@
       <file leaf-file-name="Windows.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Windows.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3286">
-              <caret line="114" column="22" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
+            <state relative-caret-position="1368">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileOperate.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileOperate.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileOperate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2666">
-              <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
+            <state relative-caret-position="259">
+              <caret line="265" column="23" selection-start-line="265" selection-start-column="23" selection-end-line="265" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#copyModuleFile#0;class#FileOperate#0" />
@@ -62,20 +50,29 @@
                 <element signature="method#changeBuildGradle#0;class#FileOperate#0" />
                 <element signature="method#changeContext#0;class#FileOperate#0" />
                 <element signature="method#changeManifest#0;class#FileOperate#0" />
+                <element signature="method#changeAppName#0;class#FileOperate#0" />
                 <element signature="method#writeFile#0;class#FileOperate#0" />
-                <element signature="e#7046#7047#0" expanded="true" />
-                <element signature="e#7127#7128#0" expanded="true" />
+                <element signature="method#setId#0;class#FileOperate#0" />
                 <element signature="method#logging#0;class#FileOperate#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/template/src/main/res/values/strings.xml">
+      <file leaf-file-name="KeyBoardAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/KeyBoardAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+            <state relative-caret-position="171">
+              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/template/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="42" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -103,10 +100,10 @@
         <option value="$PROJECT_DIR$/resources/template/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/testmodule/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/Windows.java" />
-        <option value="$PROJECT_DIR$/src/FileOperate.java" />
         <option value="$PROJECT_DIR$/module/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/resources/template/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/Windows.java" />
+        <option value="$PROJECT_DIR$/src/FileOperate.java" />
       </list>
     </option>
   </component>
@@ -127,10 +124,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-84" />
-    <option name="y" value="-25" />
-    <option name="width" value="1890" />
-    <option name="height" value="955" />
+    <option name="x" value="-154" />
+    <option name="y" value="155" />
+    <option name="width" value="1554" />
+    <option name="height" value="882" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -138,7 +135,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,8 +189,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,66 +329,54 @@
       <workItem from="1525918952233" duration="43000" />
       <workItem from="1525919108110" duration="48000" />
       <workItem from="1525921566872" duration="36000" />
+      <workItem from="1525928073983" duration="35000" />
+      <workItem from="1525928440703" duration="101000" />
+      <workItem from="1525928757975" duration="41000" />
+      <workItem from="1525928960587" duration="105000" />
+      <workItem from="1525929444890" duration="251000" />
+      <workItem from="1525930644104" duration="52000" />
+      <workItem from="1525930821029" duration="31000" />
+      <workItem from="1525930912508" duration="64000" />
+      <workItem from="1525931265909" duration="40000" />
+      <workItem from="1525931646364" duration="57000" />
+      <workItem from="1525931819200" duration="60000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20823000" />
+    <option name="totallyTimeSpent" value="25820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="TODO" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="right" id="Palette&#9;" order="13" />
       <window_info id="Image Layers" order="9" />
       <window_info anchor="right" id="Capture Analysis" order="10" />
       <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" weight="0.32994923" />
       <window_info anchor="right" id="Maven Projects" order="14" />
-      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="16" />
-      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.32977304" />
-      <window_info anchor="bottom" id="Terminal" order="18" weight="0.31909212" />
-      <window_info id="Capture Tool" order="10" />
-      <window_info id="Designer" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20833333" />
-      <window_info anchor="right" id="Database" order="12" />
-      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="11" />
-      <window_info anchor="right" id="Theme Preview" order="11" />
-      <window_info id="Favorites" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
-      <window_info anchor="right" id="Palette" order="9" />
-      <window_info id="Designer" order="8" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="10" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20833333" />
-      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="16" />
       <window_info anchor="bottom" id="Run" order="4" />
-      <window_info id="Image Layers" order="9" />
-      <window_info id="Capture Tool" order="10" />
-      <window_info id="UI Designer" order="11" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="11" />
-      <window_info anchor="right" id="Database" order="12" />
-      <window_info anchor="right" id="Palette&#9;" order="13" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" weight="0.32994923" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32933334" />
       <window_info anchor="bottom" id="Terminal" order="18" weight="0.31937173" />
-      <window_info anchor="right" id="Maven Projects" order="14" />
+      <window_info id="Capture Tool" order="10" />
+      <window_info id="Designer" order="8" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.20833333" />
+      <window_info anchor="right" id="Database" order="12" />
+      <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="11" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
       <window_info id="Favorites" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32933334" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="14" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,15 +566,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
+        <state relative-caret-position="608">
           <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/KeyBoardAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -606,52 +584,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/template/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testmodule/src/main/res/values/strings.xml" />
     <entry file="file://$PROJECT_DIR$/testmodule/src/main/AndroidManifest.xml" />
     <entry file="file://$PROJECT_DIR$/testmodule/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/module/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/module/src/main/AndroidManifest.xml" />
+    <entry file="file://$PROJECT_DIR$/module/src/main/res/drawable/btn_keyboard_key_functional_klp.xml" />
+    <entry file="file://$PROJECT_DIR$/module/src/main/res/values/theme_dark.xml" />
+    <entry file="file://$PROJECT_DIR$/module/src/main/res/values/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/resources/template/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KeyBoardAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/template/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Windows.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3286">
-          <caret line="114" column="22" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
+        <state relative-caret-position="1368">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/src/main/res/drawable/btn_keyboard_key_functional_klp.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/src/main/res/values/theme_dark.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-558" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileOperate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2666">
-          <caret line="180" column="31" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
+        <state relative-caret-position="259">
+          <caret line="265" column="23" selection-start-line="265" selection-start-column="23" selection-end-line="265" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#copyModuleFile#0;class#FileOperate#0" />
@@ -660,18 +635,11 @@
             <element signature="method#changeBuildGradle#0;class#FileOperate#0" />
             <element signature="method#changeContext#0;class#FileOperate#0" />
             <element signature="method#changeManifest#0;class#FileOperate#0" />
+            <element signature="method#changeAppName#0;class#FileOperate#0" />
             <element signature="method#writeFile#0;class#FileOperate#0" />
-            <element signature="e#7046#7047#0" expanded="true" />
-            <element signature="e#7127#7128#0" expanded="true" />
+            <element signature="method#setId#0;class#FileOperate#0" />
             <element signature="method#logging#0;class#FileOperate#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/template/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
         </state>
       </provider>
     </entry>
